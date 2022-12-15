@@ -1,0 +1,5 @@
+package com.spring.Profiles2.beans;
+
+public class Country {
+
+}

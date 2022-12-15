@@ -1,0 +1,26 @@
+package javaBasicsQues;
+
+public class FindMisingNumbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int ar[]= {1,5,3,4};
+System.out.println(add(ar));
+
+int arhv[]= {100,95,545,45};
+System.out.println(add(arhv));
+	}
+
+public static int add(int arr[]) {
+
+int sum=arr.length+1;
+int add=sum*(sum+1)/2;
+int rest=0;
+for(int i=0;i<arr.length;i++) {
+	rest=rest+arr[i];
+}
+int Missing=add-rest;
+return Missing;
+}
+
+}

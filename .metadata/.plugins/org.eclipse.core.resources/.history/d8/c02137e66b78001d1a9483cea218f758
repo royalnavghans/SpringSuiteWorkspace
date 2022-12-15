@@ -1,0 +1,30 @@
+package com.spring.Ass2.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.Ass2.bean.Customer;
+import com.spring.Ass2.error.ResourceNotFound;
+import com.spring.Ass2.servicess.Customer_Services;
+
+import jakarta.validation.Valid;
+
+@RestController
+
+public class Customer_Controller {
+	@Autowired(required = true)
+	Customer_Services custo;
+
+	public List<Customer>getList(){
+		return custo.getAll();
+	}
+public Customer getById(@PathVariable int id) {
+	return custo.findById(id).orElseThrow(()->new ResourceNotFound("Validation error"+id));
+}
+public Customer addList(@Valid  Customer cust) {
+	return custo.save(cust)
+}
+}

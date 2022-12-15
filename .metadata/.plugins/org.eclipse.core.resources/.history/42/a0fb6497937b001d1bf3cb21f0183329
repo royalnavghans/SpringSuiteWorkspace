@@ -1,0 +1,5 @@
+package com.spring.Query.bean;
+
+public class Supplier {
+
+}

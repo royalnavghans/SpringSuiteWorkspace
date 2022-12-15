@@ -1,0 +1,10 @@
+package com.spring.Ass2.bean;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "Customer")
+public class Customer {
+int Cust_Id;
+}

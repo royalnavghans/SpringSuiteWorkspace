@@ -1,0 +1,20 @@
+package com.spring.Profiles.Controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.Profiles.beans.Country;
+import com.spring.Profiles.services.CountryServices;
+
+@RestController
+public class CountryController {
+
+	CountryServices cons;
+	
+	
+	public List<Country> get(){
+		return cons.getAll();
+	}
+	
+}

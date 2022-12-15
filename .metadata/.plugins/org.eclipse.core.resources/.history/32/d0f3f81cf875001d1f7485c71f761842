@@ -1,0 +1,13 @@
+package com.spring.Valid.bean;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "Users")
+public class User {
+int id;
+String Name;
+String Email;
+String Password;
+}

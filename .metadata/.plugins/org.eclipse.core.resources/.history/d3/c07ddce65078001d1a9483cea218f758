@@ -1,0 +1,24 @@
+package com.spring.Ass2.servicess;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.spring.Ass2.bean.Customer;
+import com.spring.Ass2.repo.Customer_Repo;
+
+public class Customer_Services {
+@Autowired
+	Customer_Repo cust;
+
+
+public List<Customer>getAll(){
+	return cust.findAll();
+}
+
+public Customer getOne(int id) {
+	return cust.findById(id).get();
+	}
+
+
+}

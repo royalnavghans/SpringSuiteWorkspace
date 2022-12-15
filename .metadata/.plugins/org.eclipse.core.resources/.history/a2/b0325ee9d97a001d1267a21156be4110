@@ -1,0 +1,7 @@
+package com.spring.Profiles2.jpa;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface Employee_Jpa extends JpaRepository<T, ID> {
+
+}

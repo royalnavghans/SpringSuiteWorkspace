@@ -1,0 +1,8 @@
+package com.spring.Profiles2.bean;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Employee {
+
+}

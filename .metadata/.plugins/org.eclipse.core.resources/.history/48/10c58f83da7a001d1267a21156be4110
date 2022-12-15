@@ -1,0 +1,12 @@
+package com.spring.Profiles2.service;
+
+import org.springframework.stereotype.Service;
+
+import com.spring.Profiles2.jpa.Employee_Jpa;
+
+@Service
+public class Employee_Services {
+
+	Employee_Jpa repo;
+	
+}

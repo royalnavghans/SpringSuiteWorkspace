@@ -1,0 +1,21 @@
+package com.spring.Query.bean;
+
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "Supplier_Table")
+public class Supplier {
+
+	private int supp_Id;
+	private String suppname;
+	private String location;
+	private Date suppDate;
+	private String qty;
+	private double supp_cost;
+	
+	
+	
+}

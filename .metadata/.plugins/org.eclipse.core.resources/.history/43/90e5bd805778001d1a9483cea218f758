@@ -1,0 +1,5 @@
+package com.spring.Ass2.error;
+
+public class ErrorDetails {
+
+}

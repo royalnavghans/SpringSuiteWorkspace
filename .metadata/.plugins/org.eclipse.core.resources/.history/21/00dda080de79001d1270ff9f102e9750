@@ -1,0 +1,42 @@
+package com.spring.Profiles2.bean;
+
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+@Entity
+@Table(name = "Products")
+public class Product {
+	@Id
+private int id;
+private String Description;
+private double price;
+private Date dataCreated;
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
+public String getDescription() {
+	return Description;
+}
+public void setDescription(String description) {
+	Description = description;
+}
+public double getPrice() {
+	return price;
+}
+public void setPrice(double price) {
+	this.price = price;
+}
+public Date getDataCreated() {
+	return dataCreated;
+}
+public void setDataCreated(Date dataCreated) {
+	this.dataCreated = dataCreated;
+}
+
+
+}

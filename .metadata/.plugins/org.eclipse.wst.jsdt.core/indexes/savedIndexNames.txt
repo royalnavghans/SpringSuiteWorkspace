@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+D:\Royalnavghan\SpringSuiteWorkspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1489467963.index
+3093857500.index
+1297277283.index
+136925610.index
+2694030267.index
+3730188829.index

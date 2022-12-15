@@ -1,0 +1,5 @@
+package com.spring.Profiles.bean;
+
+public interface Customer {
+public void getCustomer(String name)
+}

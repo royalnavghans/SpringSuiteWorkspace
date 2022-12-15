@@ -1,0 +1,12 @@
+package javaBasicsQues;
+
+public class FindMisingNumbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int n=7;
+int a= n(n+1)/2;
+System.out.println();
+	}
+
+}

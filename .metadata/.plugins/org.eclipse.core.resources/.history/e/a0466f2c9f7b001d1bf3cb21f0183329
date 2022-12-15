@@ -1,0 +1,13 @@
+package com.spring.Query.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.spring.Query.jpa.Supplier_Jpa;
+
+@Component
+public class Supplier_Controller {
+@Autowired
+	Supplier_Jpa repo;
+	
+}

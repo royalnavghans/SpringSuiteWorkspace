@@ -1,0 +1,13 @@
+package com.spring.Profiles.controller;
+
+import com.spring.Profiles.bean.Customer;
+
+public class CustomerImpl2 implements Customer {
+
+	@Override
+	public void getCustomer(String name) {
+		// TODO Auto-generated method stub
+System.out.println("im from "+name);
+	}
+
+}

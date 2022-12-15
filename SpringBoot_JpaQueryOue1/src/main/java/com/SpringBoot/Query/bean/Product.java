@@ -1,0 +1,45 @@
+package com.SpringBoot.Query.bean;
+
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "Product")
+public class Product {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+private int id;
+private String name;
+private String stock_keeping_unit;
+private String description;
+private double price;
+private Date dateCreated;
+public Product() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public Product(int id, String name, String stock_keeping_unit, String description, double price, Date dateCreated) {
+	super();
+	this.id = id;
+	this.name = name;
+	this.stock_keeping_unit = stock_keeping_unit;
+	this.description = description;
+	this.price = price;
+	this.dateCreated = dateCreated;
+}
+@Override
+public String toString() {
+	return "Product [id=" + id + ", name=" + name + ", stock_keeping_unit=" + stock_keeping_unit + ", description="
+			+ description + ", price=" + price + ", dateCreated=" + dateCreated + "]";
+}
+
+
+
+	
+	
+}

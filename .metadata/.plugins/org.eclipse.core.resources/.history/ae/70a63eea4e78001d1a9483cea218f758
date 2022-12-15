@@ -1,0 +1,5 @@
+package com.spring.Ass2.bean;
+
+public class Customer {
+
+}

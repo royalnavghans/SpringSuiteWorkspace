@@ -1,0 +1,43 @@
+package com.spring.Ass2.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.Ass2.bean.Customer;
+import com.spring.Ass2.error.ResourceNotFound;
+import com.spring.Ass2.servicess.Customer_Services;
+
+import jakarta.validation.Valid;
+
+@RestController
+
+public class Customer_Controller {
+	@Autowired(required = true)
+	Customer_Services custo;
+@GetMapping("/getLists")
+	public List<Customer>getList(){
+		return custo.getAll();
+	}
+@GetMapping("/getList/{id}")
+public Customer getById(@PathVariable int id) {
+	return custo.getOne(id);
+}@PostMapping("/addList")
+public String addList(@Valid Customer cust) {
+	custo.Add(cust);
+	return "Added Successfully";
+}
+public Customer update(@Valid Customer cust) {
+	return custo.update(cust);
+}
+
+public String delete(@PathVariable int id) {
+	custo.delete(id);
+	
+	return "Deleted Sucessfully";
+}
+}

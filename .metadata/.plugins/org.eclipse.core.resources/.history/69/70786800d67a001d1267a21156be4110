@@ -1,0 +1,11 @@
+package com.spring.Profiles2.bean;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class Employee {
+private int id;
+private String firstname;
+private String lastname;
+private String email;
+}

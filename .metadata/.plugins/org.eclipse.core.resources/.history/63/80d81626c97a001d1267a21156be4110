@@ -1,0 +1,40 @@
+package com.SpringBoot.Query.runner;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import com.SpringBoot.Query.Jpa.LaptopJpa;
+@Component
+public class LaptopsRunner implements CommandLineRunner {
+	@Autowired
+LaptopJpa repo;
+	@Override
+	public void run(String... args) throws Exception {
+		// TODO Auto-generated method stub
+
+		repo.FetchlaptopByPriceRange(50000,100000).forEach(System.out::println);
+		repo.FetchlaptopByName("M2").forEach(System.out::println);
+		repo.FetchNameByBrand("Apple").forEach(System.out::println);
+//		repo.FetchPriceByBrand("HP").forEach(System.out::println);
+//		repo.FetchDescriptionbyPriceandBrand(42000,"HP").forEach(System.out::println);
+//		repo.SearchBrandbyName("vivoBook").forEach(System.out::println);
+//		repo.FetchMaxPrice().forEach(System.out::println);
+//		repo.FetchMinPrice().forEach(System.out::println);
+//		repo.FetchAvgPrice().forEach(System.out::println);
+//		repo.FetchTotalPrice().forEach(System.out::println);
+//		repo.FetchCount().forEach(System.out::println);
+//		
+		
+		
+		
+//		Object[]obj=(Object[])repo.fetchAggregateData();
+//		
+//		System.out.println("Max price "+obj[0]);
+//		System.out.println("Min price "+obj[1]);
+//		System.out.println("Avg price "+obj[2]);
+//		System.out.println("Total rows "+obj[3]);
+//		System.out.println("Sum of sal"+obj[4]);
+	}
+
+}

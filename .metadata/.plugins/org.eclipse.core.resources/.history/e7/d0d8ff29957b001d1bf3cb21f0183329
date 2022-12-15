@@ -1,0 +1,26 @@
+package com.spring.Query.jpa;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.spring.Query.bean.Supplier;
+
+public interface Supplier_Jpa extends JpaRepository<Supplier, Integer> {
+
+	
+	@Query("select * from Supplier where supp_Id=?1 and suppname=?2 ")
+	public String findBySuppIdandName(int id,String name);
+	
+	
+	@Query("select * from Supplier where supp_Id=?1 or suppname=?2 ")
+	public String findBySuppIdorName(int id,String name);
+	
+	
+	@Query("select location from Supplier")
+	public List<Supplier> findsupplocation();
+	
+	
+	
+}

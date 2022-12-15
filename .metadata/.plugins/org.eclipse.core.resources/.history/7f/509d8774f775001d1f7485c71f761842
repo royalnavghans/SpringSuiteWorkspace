@@ -1,0 +1,8 @@
+package com.spring.Valid.bean;
+
+public class User {
+int id;
+String Name;
+String Email;
+String Password;
+}

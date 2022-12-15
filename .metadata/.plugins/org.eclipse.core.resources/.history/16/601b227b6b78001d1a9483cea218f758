@@ -1,0 +1,51 @@
+package com.spring.Ass2.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.Ass2.bean.Customer;
+import com.spring.Ass2.error.ResourceNotFound;
+import com.spring.Ass2.repo.Customer_Repo;
+
+import jakarta.validation.Valid;
+
+@RestController
+public class Customer_Controller {
+	@Autowired(required = true)
+	Customer_Repo custo;
+@GetMapping("/getLists")
+	public List<Customer>getAll(){
+		return custo.findAll();
+	}
+@GetMapping("/getList/{id}")
+public Customer getById(@PathVariable int id) {
+	return custo.findById(id).orElseThrow(()->new ResourceNotFound("Validation error"+id));
+}
+@PostMapping("/addLists")
+public Customer addList(@Valid @RequestBody  Customer cust) {
+	return custo.save(cust);
+}
+@PutMapping("/updateList")
+public Customer update(@Valid @RequestBody Customer cust, int id) {
+	Customer customError=custo.findById(id).orElseThrow(()-> new ResourceNotFound("Not updated properly!! "+id));
+	customError.setCust_name(cust.getEmail());
+	customError.setEmail(cust.getEmail());
+	customError.setLocation(cust.getLocation());
+	customError.setPhone_Number(cust.getPhone_Number());
+	customError.setSalesAmount(cust.getSalesAmount());
+	return custo.save(cust);
+}
+public ResponseEntity<Customer> delete(@Valid @PathVariable  int id) {
+	Customer customError=custo.findById(id).orElseThrow(()->new ResourceNotFound("Validatio Error "+id));
+	 custo.deleteById(id);
+	 return ResponseEntity.ok().build();
+}
+}

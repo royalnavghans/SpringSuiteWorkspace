@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;AddResponse.java&apos; to &apos;SpringBootaAss1/src/main/java/com.royal.productService&apos;&#x0D;&#x0A;- Original project: &apos;SpringBootCountryServicesProject&apos;&#x0D;&#x0A;- Destination element: &apos;SpringBootaAss1/src/main/java/com.royal.productService&apos;&#x0D;&#x0A;- Original element: &apos;com.countryservice.demo.controllers.AddResponse.java&apos;" description="Copy compilation unit" destination="=SpringBootaAss1/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.royal.productService" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.countryservice.demo.controllers{AddResponse.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1670233746203" units="1" version="1.0"/>
+</session>

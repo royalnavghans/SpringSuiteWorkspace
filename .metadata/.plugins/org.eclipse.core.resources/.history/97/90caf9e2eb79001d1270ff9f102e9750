@@ -1,0 +1,51 @@
+package com.app.repos;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.app.entity.Employee;
+
+public interface EmployeeRepository extends JpaRepository<Employee, Integer>{
+	
+	//named parameteres
+	//SELECT * FROM EMPLOYEE WHERE EID>=MIN AND EID<=MAX;
+	//@Query("From Employee WHERE empId>=:min and empId<=:max")
+	//List<Employee> fetchEmployeeByIdRange(int min,int max);
+	
+	//positonal param
+	//@Query("FROM Employee where empId>=?1 and empId<=?2")
+	//public List<Employee> searchByEmpIdRange(int min,int max);
+	
+	//@Query(value = "SELECT * FROM emptab where dept=:dept",nativeQuery = true)
+	//public List<Employee> searchEmpByDept(String dept);
+	
+	//@Query("FROM Employee where empName in(:name1,:name2,:name3) order by empName desc")
+	//public List<Employee> fetchEmpByName(String name1,String name2,String name3);
+	
+	//specific columns
+	//@Query("SELECT empId,empName,empSal from Employee where empSal>=:sal and empName in(:name1,:name2,:name3)")
+	//public List<Object[]> fetchEmpBySalAndName(Double sal,String name1,String name2,String name3);
+	
+	//for specific colum
+	//@Query("select empName from Employee where empId>=:min and empId<=:max")
+	//public List<String> fetchEmpNameById(int min,int max);
+	
+	//single row
+	//@Query("select e from Employee e where empName=:name")
+	//public Employee fetchSingleRow(String name);
+	
+	//single row specific col
+	//@Query("SELECT empId,empName,empSal from Employee where empName=:name")
+	//public Object fetchEmpPartialDataByName(String name);
+	
+	//max sal
+	@Query("SELECT max(empSal) from Employee")
+	public double fetchMaxSal();
+	
+	
+	@Query("SELECT max(empSal),min(empSal),avg(empSal),count(*),sum(empSal) from Employee")
+	public Object fetchAggregateData();
+}
+

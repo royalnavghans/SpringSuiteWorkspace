@@ -1,0 +1,17 @@
+package com.spring.Query.jpa;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.spring.Query.bean.Supplier;
+
+public interface Supplier_Jpa extends JpaRepository<Supplier, Integer> {
+
+	
+	@Query("select from Supplier where ")
+	public String findBySuppIdandName(int id,String name);
+	
+	
+	
+	
+}

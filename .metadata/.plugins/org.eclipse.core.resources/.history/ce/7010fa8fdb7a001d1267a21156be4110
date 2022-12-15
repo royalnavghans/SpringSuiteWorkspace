@@ -1,0 +1,20 @@
+package com.spring.Profiles2.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.Profiles2.bean.Employee;
+import com.spring.Profiles2.service.Employee_Services;
+
+@RestController
+public class Employee_Service {
+	@Autowired
+Employee_Services emp;
+	
+	public List<Employee>getEmpAll(){
+		emp.getAll();
+	}
+	
+}

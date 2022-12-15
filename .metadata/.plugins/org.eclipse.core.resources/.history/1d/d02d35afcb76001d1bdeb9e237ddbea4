@@ -1,0 +1,20 @@
+package com.spring.Profiles.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.spring.Profiles.Dao.CountryDao;
+import com.spring.Profiles.beans.Country;
+
+@Service
+public class CountryServices {
+	@Autowired
+	CountryDao dao;
+
+	public List<Country>getAll(){
+		return dao.findAll();
+	}
+	
+}

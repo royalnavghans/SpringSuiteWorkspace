@@ -1,0 +1,13 @@
+package com.spring.Profiles2.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.spring.Profiles2.jpa.Employee_Jpa;
+
+@Service
+public class Employee_Services {
+@Autowired
+	Employee_Jpa repo;
+	
+}

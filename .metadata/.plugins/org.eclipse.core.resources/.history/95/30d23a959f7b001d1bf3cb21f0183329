@@ -1,0 +1,21 @@
+package com.spring.Profiles.config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.spring.Profiles.bean.Customer;
+
+public class CustomerImpl implements Customer {
+	
+
+	
+	
+	@Override
+	@GetMapping("/message")
+	@Value("${my.message}")
+	public void getCustomer(String name) {
+		// TODO Auto-generated method stub
+System.out.println("Hello My name is "+name);
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.spring.Valid.bean;
+
+public class User {
+
+}

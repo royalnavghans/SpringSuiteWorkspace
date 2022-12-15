@@ -1,0 +1,39 @@
+package com.SpringBoot.profile.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.SpringBoot.profile.bean.Movie;
+
+@RestController
+public class Movre_Controller {
+
+	private static List<Movie>arr;
+	{
+		arr=new ArrayList<Movie>();
+		
+		arr.add(new Movie(01,"vikram","Kamal"));
+		arr.add(new Movie(02,"Roberry","Robert"));
+		arr.add(new Movie(03,"Kabali","Rajni"));
+		arr.add(new Movie(04,"Bigil","Vijay"));
+		arr.add(new Movie(05,"Soorarai Potru","Suriya"));
+	}
+	@RequestMapping("/getMovie")
+	//@Cacheable(value = "movieInfo",key="#name",condition = "#name == 'Robert'")
+	public List<Movie> get(){
+		return arr;
+
+	}
+	@RequestMapping("/getMovies/{name}")
+	@Cacheable(value = "names",condition = "#name.equals('Robert')")
+	public String getAll(@PathVariable String name) throws InterruptedException {
+		Thread.sleep(1000);
+		System.out.println("Hello "+name);
+		return "helllo";
+	}
+}

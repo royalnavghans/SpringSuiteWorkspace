@@ -1,0 +1,37 @@
+package com.spring.Profiles.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.spring.Profiles.Dao.CountryDao;
+import com.spring.Profiles.beans.Country;
+
+@Service
+public class CountryServices {
+	@Autowired
+	CountryDao dao;
+
+	public List<Country>getAll(){
+		return dao.findAll();
+	}
+	
+ public Country getById(int id) {
+	 return dao.findById(id).get();
+ }
+ public Country add(Country con) {
+	 return dao.save(con);
+ }
+ public String addAll(List<Country> add) {
+	 dao.saveAll(add);
+	 return "Added successfully into the database" ;
+ }
+ public Country update(Country con) {
+	 return dao.save(con);
+ }
+ 
+ public String delete(int id) {
+	 dao.delete(id);
+ }
+}

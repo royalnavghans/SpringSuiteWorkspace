@@ -1,0 +1,11 @@
+package com.spring.Profiles2.bean;
+
+import java.util.Date;
+
+public class Product {
+private int id;
+private String Description;
+private double price;
+private Date dataCreated;
+
+}

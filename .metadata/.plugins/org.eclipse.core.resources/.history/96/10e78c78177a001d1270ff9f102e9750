@@ -1,0 +1,28 @@
+package com.spring.Profiles2.repo;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.spring.Profiles2.bean.Product;
+
+public  interface ProductRepo extends JpaRepository<Product, Integer> {
+  
+    // @Query(nativeQuery = true,value = "SELECT * FROM Products")//native query
+	@Query("from Product")
+	public  List<Product> getAllName();
+	
+	@Query("SELECT min(price),max(price) from Product")
+	public Object findMax();
+	
+//	@Query("FROM Product where name=:name")
+	public List<Product> findByName(String name);
+	
+	// String qry = select * from product where name = ?
+	// stmt.executeQuery(qry)
+	
+	@Query("FROM Product where price>=:d1 and price <= :d2")
+	public List<Product> findMinMax(int d1,int d2);
+	
+}

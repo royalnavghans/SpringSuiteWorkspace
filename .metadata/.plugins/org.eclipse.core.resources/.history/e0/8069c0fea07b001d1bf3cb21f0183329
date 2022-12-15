@@ -1,0 +1,13 @@
+package com.spring.Profiles;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringBootProfileQuestionApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootProfileQuestionApplication.class, args);
+	}
+
+}

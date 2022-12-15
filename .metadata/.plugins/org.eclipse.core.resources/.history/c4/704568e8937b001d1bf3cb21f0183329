@@ -1,0 +1,34 @@
+package com.spring.Query.bean;
+
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "Supplier_Table")
+public class Supplier {
+
+	private int supp_Id;
+	private String suppname;
+	private String location;
+	private Date suppDate;
+	private String qty;
+	private double supp_cost;
+	
+	public Supplier() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "Supplier [supp_Id=" + supp_Id + ", suppname=" + suppname + ", location=" + location + ", suppDate="
+				+ suppDate + ", qty=" + qty + ", supp_cost=" + supp_cost + "]";
+	}
+	
+	
+	
+	
+	
+}

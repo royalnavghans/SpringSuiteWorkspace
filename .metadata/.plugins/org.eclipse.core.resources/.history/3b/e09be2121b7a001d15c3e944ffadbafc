@@ -1,0 +1,27 @@
+package com.SpringBoot.Query.Jpa;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.SpringBoot.Query.bean.Laptops;
+
+public interface LaptopJpa extends JpaRepository<Laptops, Integer> {
+	
+	
+	public List<Laptops>FetchlaptopbypriceRange(int min,int max);
+	public List<Laptops>FetchlaptopbyName(String name);
+	public List<Laptops>FetchnamebyBrand(String name);
+	public List<Laptops>Fetchpricebybrand(String name);
+	public List<Laptops>FetchdescriptionbyPriceandBrand(int price,String brand);
+	public List<Laptops>SearchBrandbyName(String name);
+	public List<Laptops>FetchMaxPrice();
+	public List<Laptops>FetchMinPrice();
+	public List<Laptops>FetchAvgPrice();
+	public List<Laptops>FetchTotalPrice();
+	public List<Laptops>FetchCount();
+	
+	@Query("SELECT max(price),min(price),avg(price),count(*),sum(price) from Laptops")
+	public Object fetchAggregateData();
+}

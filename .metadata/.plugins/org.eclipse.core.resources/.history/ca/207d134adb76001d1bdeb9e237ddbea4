@@ -1,0 +1,9 @@
+package com.spring.Profiles2.services;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.spring.Profiles2.beans.Country;
+
+public interface CountryJPA extends JpaRepository<Country, Integer	> {
+
+}

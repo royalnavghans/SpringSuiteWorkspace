@@ -1,0 +1,107 @@
+package com.spring.Query.bean;
+
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "Supplier_Table")
+public class Supplier {
+@Id
+	private int supp_Id;
+	private String suppname;
+	private String location;
+	private Date suppDate;
+	private String qty;
+	private double supp_cost;
+	
+	public Supplier() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+
+	public Supplier(int supp_Id, String suppname, String location, Date suppDate, String qty, double supp_cost) {
+		super();
+		this.supp_Id = supp_Id;
+		this.suppname = suppname;
+		this.location = location;
+		this.suppDate = suppDate;
+		this.qty = qty;
+		this.supp_cost = supp_cost;
+	}
+
+
+	public int getSupp_Id() {
+		return supp_Id;
+	}
+
+
+	public void setSupp_Id(int supp_Id) {
+		this.supp_Id = supp_Id;
+	}
+
+
+	public String getSuppname() {
+		return suppname;
+	}
+
+
+	public void setSuppname(String suppname) {
+		this.suppname = suppname;
+	}
+
+
+	public String getLocation() {
+		return location;
+	}
+
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+
+	public Date getSuppDate() {
+		return suppDate;
+	}
+
+
+	public void setSuppDate(Date suppDate) {
+		this.suppDate = suppDate;
+	}
+
+
+	public String getQty() {
+		return qty;
+	}
+
+
+	public void setQty(String qty) {
+		this.qty = qty;
+	}
+
+
+	public double getSupp_cost() {
+		return supp_cost;
+	}
+
+
+	public void setSupp_cost(double supp_cost) {
+		this.supp_cost = supp_cost;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Supplier [supp_Id=" + supp_Id + ", suppname=" + suppname + ", location=" + location + ", suppDate="
+				+ suppDate + ", qty=" + qty + ", supp_cost=" + supp_cost + "]";
+	}
+	
+	
+	
+	
+	
+}

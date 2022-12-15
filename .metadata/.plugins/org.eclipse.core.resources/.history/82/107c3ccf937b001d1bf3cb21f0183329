@@ -1,0 +1,10 @@
+package com.spring.Query.bean;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "Supplier_Table")
+public class Supplier {
+
+}

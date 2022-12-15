@@ -1,0 +1,13 @@
+package com.spring.Profiles.Controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.Profiles.services.CountryServices;
+
+@RestController
+public class CountryController {
+
+	CountryServices cons;
+	
+	
+}

@@ -1,0 +1,28 @@
+package com.spring.Profiles.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.Profiles.beans.Country;
+import com.spring.Profiles.services.CountryServices;
+
+@RestController
+public class CountryController {
+@Autowired
+	CountryServices cons;
+	
+	@GetMapping("/getList")
+	public List<Country> get(){
+		return cons.getAll();
+	}
+	public Country getByid(int id) {
+		return cons.getById(id);
+	}
+	
+	public Country add(Country con) {
+		return cons.add(con);
+	}
+}

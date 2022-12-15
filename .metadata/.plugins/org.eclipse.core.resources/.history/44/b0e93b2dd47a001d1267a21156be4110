@@ -1,0 +1,47 @@
+package com.SpringBoot.Query.Runner;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import com.SpringBoot.Query.jpa.ProductJpa;
+@Component
+public class QueryRunner implements CommandLineRunner {
+	@Autowired
+ProductJpa repo;
+	@Override
+	public void run(String... args) throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("=========findByNameOrDescription==========");
+		repo.findByNameOrDescription("apple", "apple").forEach(System.out::println);
+		System.out.println("=========findByNameAndDescription==========");
+
+		repo.findByNameAndDescription("apple", "apple").forEach(System.out::println);
+		System.out.println("=========findByPriceGreaterThan==========");
+
+		repo.findByPriceGreaterThan(80000).forEach(System.out::println);
+		System.out.println("=========findByNameContaining==========");
+
+		repo.findByNameContaining("p").forEach(System.out::println);
+		System.out.println("=========findByNameLike==========");
+
+		repo.findByNameLike("mobile").forEach(System.out::println);
+		System.out.println("=========findByPriceBetween==========");
+
+		repo.findByPriceBetween(1200, 96000).forEach(System.out::println);
+		System.out.println("=========findByName========== ");
+
+		repo.findByName("apple").forEach(System.out::println);
+		System.out.println("=========findById==========");
+
+		repo.findById(3).forEach(System.out::println);
+		
+		System.out.println("=========findMinAndMax========== ");
+
+		Object[] obj=(Object[])repo.findMinAndMax();
+		System.out.println("Minimum price is "+obj[0]);
+		System.out.println("Maximum Price is "+obj[1]);
+		
+	}
+
+}
