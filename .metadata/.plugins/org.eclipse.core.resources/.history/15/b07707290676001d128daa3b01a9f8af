@@ -1,9 +1,0 @@
-package com.spring.Valid.Repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.spring.Valid.bean.User;
-
-public interface UserJpa extends JpaRepository<User, Long> {
-
-}
