@@ -1,0 +1,94 @@
+package jdbctest;
+
+import java.sql.*;
+public class jdbcins {
+
+	public static void main(String[] args) throws Exception
+	
+	{
+		
+		String url="jdbc:mysql://localhost:3306/world";
+		String uname="rajesh";
+		String pass="mysql";
+		
+		String query="insert into world.Country(Code,Name) values ('012','afga')";
+		
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection conn = DriverManager.getConnection(url,uname,pass);
+		
+Statement st = conn.createStatement();
+			int count= st.executeUpdate(query);	
+		
+		System.out.println(count + "row/s effected");
+		
+		st.close();
+		conn.close();
+		
+	}
+}
+
+
+-------------------------------------------------------------------------------------
+package jdbctest;
+
+import java.sql.*;
+import java.util.*;
+public class PrepStmnt {
+
+	public static void main(String[] args) throws Exception
+	
+	{
+		
+		String url="jdbc:mysql://localhost:3306/world";
+		String uname="rajesh";
+		String pass="mysql";
+		
+		//String query="insert into world.Country(Code,Name) values (8,'hhhh')";
+		
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection conn = DriverManager.getConnection(url,uname,pass);
+		
+		/*
+		//SELECT
+		String selquery="select * from World.Country";
+	    PreparedStatement stmt=conn.prepareStatement(selquery);  
+		ResultSet rs=stmt.executeQuery();  
+		while(rs.next()){  
+		System.out.println(rs.getString(1)+" "+rs.getString(2));  
+		}  */
+		
+		//INSERT
+		/*
+		String insquery="insert into world.Country(code,name,Capital) values(?,?,?)";
+		PreparedStatement stmt=conn.prepareStatement(insquery);  
+		stmt.setString(1,"707");//1 specifies the first parameter in the query  
+		stmt.setString(2,"Rajasekhar");  
+		stmt.setInt(3,8877);
+				
+		int i=stmt.executeUpdate();  
+		System.out.println(i+" records inserted"); 
+		
+		*/
+		
+		//delete the rec
+		/*
+		PreparedStatement stmt=conn.prepareStatement("delete from  world.Country where Code=?");  
+		stmt.setString(1,"707");//1 specifies the first parameter in the query
+		int i=stmt.executeUpdate(); 
+	    System.out.println(i+" records deleted");*/
+		
+		//update record
+		
+		PreparedStatement stmt=conn.prepareStatement("update world.Country set name=? where code=?");  
+		stmt.setString(1,"kishore");//1 specifies the first parameter in the query i.e. name  
+		stmt.setString(2,"012");  
+		int i=stmt.executeUpdate(); 
+		System.out.println(i+" records updated"); 
+		
+		
+		
+		stmt.close();
+		conn.close();
+		
+	}
+}

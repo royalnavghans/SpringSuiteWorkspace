@@ -1,0 +1,21 @@
+Perform REST CRUD operations on Employee details and run the test cases on each layer.
+
+Feilds:
+id, firstName, lastName, email
+
+Create a repository, service, controller layers
+
+and perform the following operations:
+
+Operations:
+AddEmployee
+GetEmployees
+updateEmployee
+deleteEmployee
+
+and run the below test cases:
+
+test cases on:
+repository layer
+service layer
+controller layer

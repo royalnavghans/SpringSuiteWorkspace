@@ -1,0 +1,19 @@
+ArrayList Assignment:
+
+CReate java program to 
+
+1.  create a new array list, add some colors (string) and print out the collection.
+2.   iterate through all elements in a array list.
+3.  insert an element in the array list at the first position
+4.   update specific array element by given element.
+5.   remove the third element from a array list
+6.  search an element in a array list.
+7.    sort a given array list.
+8.  copy one array list in another.
+9.  reverse elements in a array list.
+10.  extract a portion of a array list.
+11. of swap two elements in an array list
+12.   join two array lists.
+13.   empty an array list.
+14.   increase the size of an array list.
+15.  replace the second element of a ArrayList with the specified element.

@@ -1,0 +1,6 @@
+1.create functional interface for finding length of the string using lambda and method references
+2.create functional interface for finding area of rectangle using lambda and method references
+3.create an interface testinterface with method m1() and implement method refrences for the same .
+4.create a method a1() using interfaces and Implement the local variable reinitialization for x and y variuables 
+ using  lambda im the main class method m2() .
+ 

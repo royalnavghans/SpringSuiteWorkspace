@@ -1,0 +1,70 @@
+package junitprj;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class AssertionsTest {
+	Calculator7 calc;
+	
+	@BeforeEach
+	public void init()
+	{
+		
+		calc = new Calculator7();
+		System.out.println("Initialization");
+	}
+	
+	@Test
+	public void assertEqualsTest()
+	{
+		int sum = calc.add(2,2);
+		assertEquals(10,sum,"Test Failed as actual value is not equals to expected value");
+	
+	}
+	
+	@Test
+	public void assertNotEqualsTest()
+	{
+		int sum = calc.add(2,2);
+		assertNotEquals(4,sum,"Test Failed as actual value is not equals to expected value");
+	
+	}
+	
+	@Test
+	public void assertNullTest()
+	{
+		String nullString = null;
+		String NotnullString = "Rajesh";
+		assertNull(nullString);
+	}
+	
+	@Test
+	public void assertNotNullTest()
+	{
+		String nullString = null;
+		String NotnullString = "Rajesh";
+		assertNotNull(nullString);
+	}
+	
+	@Test
+	public void assertTrueTest()
+	{
+		boolean truevalue=false;
+		boolean falsevalue=false;
+		assertTrue(truevalue);
+	}
+	
+	@Test
+	public void assertFalseTest()
+	{
+		boolean truevalue=true;
+		boolean falsevalue=false;
+		assertFalse(truevalue);
+	}
+}

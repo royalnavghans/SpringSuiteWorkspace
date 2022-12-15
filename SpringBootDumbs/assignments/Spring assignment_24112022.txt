@@ -1,0 +1,29 @@
+1.CREATE PERSON,ADDRESS,EDUCATION CLASSES WITH BELOW FIELDS INFO AND IMPLEMENT DEPENDENCY INJECTION USING XML CONFIGURATION AND JAVA CONFIGURATIONS.
+
+
+ADDRESS FIELDS:
+
+streeName
+
+houseNo
+
+Education:
+
+qualification
+
+institute
+
+Person:
+
+Inject address and education class properties 
+
+Implement the above using diferent types of configurations 
+
+1.Java Configuration
+2. XML configuration
+
+Q2.Implement the above properties file  and environment to input the data for education nd address.
+
+
+
+ 

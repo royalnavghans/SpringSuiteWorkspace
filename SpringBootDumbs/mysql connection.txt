@@ -1,0 +1,4 @@
+create user 'HP'@'localhost' identified by 'HP';
+
+grant ALL PRIVILEGES ON springdb.* TO 'HP'@'localhost';
+

@@ -1,0 +1,12 @@
+1.create classes products and orders having below fields info and implement DI using 
+setter injection and costructor DI.
+
+products:
+
+PRODID,Pname,pqty
+
+orders:
+
+ordid,ordname,ordvalue
+
+core,context,bean

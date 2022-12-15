@@ -1,0 +1,13 @@
+create annotations for the below
+
+create a List to add or remove employees to or from List
+
+provided with below methods
+
+1.remove(String name)
+2.add(String name)
+3.sizeofEmployee()
+4.removeAll()
+
+Build test cases for all of the above using the annotaion @Test
+

@@ -1,0 +1,26 @@
+
+build a program to
+
+1.append the specified element to the end of a hash set
+2.iterate through all elements in a hash set.
+3.empty an hash set
+4.test a hash set is empty or not
+5.convert a hash set to an array.
+6.compare two hash set
+
+PriorityQueue:
+
+7.to create a new priority queue, add some colors (string) and print out the elements of the priority queue
+8.iterate through all elements in priority queue
+9.insert a given element into a priority queue
+10.remove all the elements from a priority queue
+11.count the number of elements in a priority queue
+12.retrieve and remove the first element
+
+Hashmap:
+
+ 13.associate the specified value with the specified key in a HashMap
+ 14.count the number of key-value (size) mappings in a map
+ 15.copy all of the mappings from the specified map to another map
+ 16.check whether a map contains key-value mappings (empty) or not
+ 17.get the value of a specified key in a map

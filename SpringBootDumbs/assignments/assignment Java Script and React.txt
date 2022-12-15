@@ -1,0 +1,32 @@
+1.Write a JavaScript function to get the values of First 
+and Last name from html form
+2. Write a JavaScript function that accept row, column, 
+(to identify a particular cell) and a string to update 
+the content of that cell.
+3.Write a JavaScript program to remove items from a 
+dropdown list
+4.Write a JavaScript program     
+using regular expressions perform below validations
+5.Write a JavaScript program to test the first character
+ of a string is uppercase or not.
+6. Write a JavaScript program to count number of words in string
+Note :
+- Remove white-space from start and end position.
+- Convert 2 or more spaces to 1.
+- Exclude newline with a start spacing.
+7.Write a JavaScript function to check whether a given value is IP value or not.
+8.Write a JavaScript function to print an integer with commas as thousands separators
+Test Data :
+console.log(thousands_separators(1000));
+"1,000"
+console.log(thousands_separators(10000.23));
+"10,000.23"
+console.log(thousands_separators(100000));
+"100,000"
+9. Using React Applications methods create web application for user login with below validations
+
+      password shall consists of 1 upper case,1 special character, no sequence numbers shall be entered and password shall be minimum 8 chars.
+
+10.Creating a simple counter using React which  decrements count dynamically on-screen as the user clicks on the button using JSX code.
+
+11.Implement multi page navigation using React Router between Home,Contact ,Services pages.

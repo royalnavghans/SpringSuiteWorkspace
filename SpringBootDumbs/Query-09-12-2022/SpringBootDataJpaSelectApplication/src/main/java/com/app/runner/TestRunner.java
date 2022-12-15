@@ -1,0 +1,57 @@
+package com.app.runner;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import com.app.repos.EmployeeRepository;
+
+@Component
+public class TestRunner implements CommandLineRunner{
+
+	@Autowired
+	private EmployeeRepository repo;
+	
+	@Override
+	public void run(String... args) throws Exception {
+		//positional param
+		//repo.searchByEmpIdRange(5, 8).forEach(System.out::println);
+		
+		//emp acc to dept
+		//repo.searchEmpByDept("QA").forEach(System.out::println);
+		
+		//fetch emp by names
+		//repo.fetchEmpByName("A", "D", "G").forEach(System.out::println);
+		
+		//fetch the emp id,name,sal by sal and name
+		//List<Object[]>
+		/*repo.fetchEmpBySalAndName(1100.0, "H", "K", "A")
+		.stream()
+		.map(ob->ob[0]+","+ob[1]+","+ob[2])
+		.forEach(System.out::println);*/
+		
+		//fetch empName col
+		//repo.fetchEmpNameById(2, 8).forEach(System.out::println);
+		
+		//fetch only one row
+		//System.out.println(repo.fetchSingleRow("B"));
+		
+		/*Object[] res = (Object[])repo.fetchEmpPartialDataByName("B");
+		for(Object ob : res) {
+			System.out.print(ob+" ");
+		}
+		System.out.println();*/
+		
+		
+		System.out.println(repo.fetchMaxSal());
+		
+		Object[] res = (Object[])repo.fetchAggregateData();
+		System.out.println("Max sal "+res[0]);
+		System.out.println("Min sal "+res[1]);
+		System.out.println("Avg sal "+res[2]);
+		System.out.println("Total rows "+res[3]);
+		System.out.println("Sum of sal"+res[4]);
+		
+	}
+
+}
