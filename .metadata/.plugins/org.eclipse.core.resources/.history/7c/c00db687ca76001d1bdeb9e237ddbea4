@@ -1,8 +1,0 @@
-package com.spring.Profiles.beans;
-
-public class Country {
-
-	private String CountryName;
-	private String CountryCapital;
-	private int CountryCode;
-}

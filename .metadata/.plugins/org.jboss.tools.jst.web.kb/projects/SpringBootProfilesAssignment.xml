@@ -12,11 +12,11 @@
    <libraries>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-spring-webmvc-6.0.2.jar/meta-inf/spring-form.tld" project="demo"/>
+      path="FileSystems/lib-spring-webmvc-6.0.2.jar/meta-inf/spring-form.tld" project="SpringBootAss2"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-spring-webmvc-6.0.2.jar/meta-inf/spring.tld" project="demo"/>
+      path="FileSystems/lib-spring-webmvc-6.0.2.jar/meta-inf/spring.tld" project="SpringBootAss2"/>
     </library>
    </libraries>
   </path>
@@ -104,7 +104,6 @@
   <path value="C:/Users/admin/.m2/repository/org/springframework/spring-test/6.0.2/spring-test-6.0.2.jar"/>
  </paths>
  <validation>
-  <core validator-id="jboss.cdi.core"/>
   <el/>
  </validation>
  <aliases/>

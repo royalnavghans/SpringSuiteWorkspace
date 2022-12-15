@@ -1,0 +1,16 @@
+package javaBasicsQues;
+
+public class Arr {
+ public static void main (String[] args) {
+	 
+	 String str="welcome my india";
+	 //String s[]=str.split(" ");
+	 String ss=" ";
+	for(int i=0;i<str.length();i++) {
+		if(str=="india") {
+			
+			System.out.println(ss);
+		}
+	}
+ }
+}
