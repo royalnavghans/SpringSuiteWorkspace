@@ -1,0 +1,31 @@
+.App1{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    border: 2px solid gray;
+    padding-bottom: 50px;
+    margin: 10px;
+    width: 450px;
+}
+.But{
+    width: 260px;
+    background-color: rgb(10, 160, 206);
+    color: white;
+    border-radius: 5px;
+    height: 40px;
+    border: none;
+   
+}
+.NameIN{
+    width: 250px;
+    height: 30px;
+    text-align: center;
+    font-weight: 300;
+}
+.red{
+    color: red;
+    font-size: small;
+}
+.inp{
+   font-size: 14px !important;
+}

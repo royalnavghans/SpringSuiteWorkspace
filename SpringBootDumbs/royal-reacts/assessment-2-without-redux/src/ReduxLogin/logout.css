@@ -1,0 +1,28 @@
+.logOut{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.logoutBut{
+   height: 30px;
+   width: 250px;
+   
+    margin-top: 10px;
+    background: rgb(8, 178, 230);
+    border: none;
+    color: white;
+    font-size: 15px;
+  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 3px;
+}
+.spanLogout{
+    color: rgb(14, 167, 206);
+}
+.afterText{
+    color: violet;
+}

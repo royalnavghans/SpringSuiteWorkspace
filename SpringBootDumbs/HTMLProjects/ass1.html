@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+   
+ Enter Your First Name: <input type="text" id="fname"><br><br>
+ Enter Your Last Name: <input type="text" id="lname"><br><br>
+ <input type="submit" id="sub">
+    
+
+<script>
+document.getElementById("sub").onclick=function(){
+    let name=document.getElementById("fname").value;
+    let name1=document.getElementById("lname").value;
+  //let cname=fname+lname;
+   window.alert(`Hai ${fname} ${lname}`);
+//document.write(cname)
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>1.Write a JavaScript function to get the values of First and Last name from html form</h3><br>
+
+    Enter Your First Name: <input type="text" id="fname"><br><br>
+    Enter Your Last Name: <input type="text" id="lname"><br><br>
+    <input type="submit" id="sub">
+
+
+
+
+    <h3>2. Write a JavaScript function that accept row, column, (to identify a particular cell) and a string to update the content of that cell.</h3><br>
+    <table border="1" id="tab">
+        <tbody>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+<tr>
+
+    <td>1</td>
+    <td>sri</td>
+    <td>abc@gmail.com</td>
+   
+</tr>
+<tr>
+    <td>2</td>
+    <td>hari</td>
+    <td>abc@gmail.com</td>
+</tr>
+        </tbody>
+    </table><br>
+    <h2>Update</h2> 
+    <input type="submit" onclick="sub()" value="Change content"><br><br><br>
+
+    <h3> 3.Write a JavaScript program to remove items from a dropdown list </h3><br><br>
+
+
+<select  id="drop">
+<option>Select Items</option>
+<option>one</option>
+<option>two</option>
+<input type="submit" onclick="sub1()">
+</select><br><br>
+<h3>4.Write a JavaScript program to count and display the items of a dropdown list, in an alert window</h3><br><br>
+
+<select  id="drop1">
+    <option>Select Items</option>
+    <option>one</option>
+    <option>two</option>
+    <input type="submit" id="sub4"><br><br>
+    </select><br><br>
+    Add List: <input type="text" id="textAdd"><br><br>
+    <button id="butAdd">Add</button>
+
+<h3>5.Write a JavaScript program to test the first character of a string is uppercase or not.</h3><br><br>
+
+Enter Any String value:  <input type="text" id="name"><br><br>
+<input type="submit" onclick="sub2()"><br><br>
+
+<h3>6. Write a JavaScript program to count number of words in string </h3>
+
+Enter Any String value:  <input type="text" id="count1"><br><br>
+<input type="submit" onclick="count1()"><br><br>
+
+<h3>8.Write a JavaScript function to print an integer with commas as thousands separators
+    Test Data :</h3>
+
+Enter Any Ip Address:  <input type="text" id="ip1"><br><br>
+<input type="submit" onclick="ip1()"><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+document.getElementById("sub").onclick=function(){
+    let name=document.getElementById("fname").value;
+    let name1=document.getElementById("lname").value;
+  //let cname=fname+lname;
+   alert(`Hai ${name} ${name1}`);
+//document.write(cname)
+}
+
+function sub()
+{
+    row = window.prompt("Insert Rows");
+    column = window.prompt("Insert column");
+    content = window.prompt("Insert content");  
+    var tabs=document.getElementById('tab').rows[parseInt(row)].cells;
+    tabs[parseInt(column)].innerHTML=content;
+}
+
+function sub1(){
+
+var drop=document.getElementById("drop");
+drop.remove(drop.selectedIndex)
+
+
+}
+
+
+document.getElementById("sub4").onclick=function(){
+  var len=document.getElementById("drop1").options.length
+  alert(len)  
+
+  var leng=document.getElementById("sub4").value
+
+}
+
+
+document.getElementById("butAdd").onclick = function() {
+var txt = document.getElementById("textAdd").value; // getting the value from the inputbox
+var opts = document.getElementById("drop1"); // getting the dropdown element
+opts.innerHTML  +=  "<option>" + txt + "</option>"  // adding the option at the end
+   
+}
+
+
+
+
+function sub2(){
+    var find=document.getElementById('name').value;
+
+  if (find[0].toUpperCase() == find[0]) {
+    alert('First letter is uppercase')
+  }
+ else {
+  alert('First letter is not uppercase')
+}
+}
+
+function sub3(){
+    var finds=document.getElementById("name1").value;
+    console.log(finds);
+   alert(finds.length);
+}
+
+    function count1(){
+    var counts=document.getElementById("count1").value;
+    var num=0;
+    for(var i=0;i<counts.length;i++){
+        if(counts[i]==" "){
+            num++;
+        }
+    }
+alert(num);
+
+}
+
+
+
+
+
+function ip1(){
+var namew=document.getElementById("ip1").value
+if (/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(namew)) {  
+   alert("Your IP address is valid!!")
+    return (true)  
+
+  }  else{
+  alert("You have entered an invalid IP address!")  
+  return (false)  
+}  }
+
+
+
+
+
+// ^(?!0)(?!.*\.$)((1?\d?\d|25[0-5]|2[0-4]\d)(\.|$)){4}$
+
+    </script>
+</body>
+</html>

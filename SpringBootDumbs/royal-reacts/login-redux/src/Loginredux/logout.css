@@ -1,0 +1,20 @@
+.logout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.logoutBut{
+    min-width: 300px;
+    padding: 17px 30px;
+    margin-top: 30px;
+margin-left: 55px;
+    background: black;
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 3px;
+
+}
